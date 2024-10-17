@@ -1,27 +1,85 @@
+/* General Styles */
 * {
-    font-style: helvetica;
-  }
-  @media (max-width: 960px) {
-    .card {
-      padding: 2rem;
-    }
-  }
-
-.body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main {
-    padding: 20px;
-    text-align: justify;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-.header {
+header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Navigation */
+#navbar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+}
+
+#navbar header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#navbar ul li {
+    margin: 10px 0;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+#navbar ul li a:hover {
+    color: #007BFF;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+main .main-section {
+    margin-bottom: 30px;
+}
+
+main .main-section header {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 5px solid #333;
+}
+
+main pre code {
+    font-family: monospace;
+    font-size: 16px;
 }
